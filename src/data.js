@@ -16,8 +16,3 @@ export const anotherExample = () => {
 };
 
 //funcion filter
-/*function filtrar(tipo){
-  const look = data.pokemon.filter(poke => poke.type.includes(tipo));
-  return(look)
-}
-filtrar("grass");*/
