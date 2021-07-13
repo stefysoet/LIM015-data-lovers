@@ -119,3 +119,18 @@
     visibility: visible;
     transform: scale(1);
   }
+  /*estilo visualizacion del pokemon(flexbox)*/
+  #data{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .cardpokemon{
+    width:250px;
+    height: 200px;
+    background-color: rebeccapurple;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
