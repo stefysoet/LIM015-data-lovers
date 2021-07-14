@@ -1,29 +1,49 @@
+import {filtrar} from './data.js';
 import data from './data/pokemon/pokemon.js';
-import{ example}from './data.js';
+const pokeInfo = data.pokemon;
 
-//asignar valores para iniciar
-// const pokeCard= document.querySelector('');
-// const pokeName= document.querySelector('');
-// const pokeImg= document.querySelector('');
-// const pokeId= document.querySelector('');
-// const pokeTypes= document.querySelector('');
+function buscarPokemon(pokeInfo){
+    const mostrarPokemon= document.querySelector('#info');
+    //console.log(pokeInfo);
+    for (let i=0; i<pokeInfo.length; i++){
+        const pokeImage= pokeInfo[i].img;
+        const pokeNombre= pokeInfo[i].name;
+        const pokeNumero= pokeInfo[i].num;
+        const pokeTipo= pokeInfo[i].type;
+        let mostrarTipo;
+        
+            for (let j=0; j<pokeTipo.length; j++){
+             mostrarTipo=pokeTipo[j];
+         }
 
-//eslint-disable-next-line no-console
-console.log(example, data);
-const buttonpokedex = document.getElementById("pokedex");
-buttonpokedex.addEventListener("click" , function(){
-    document.getElementById("data").innerHTML=data.pokemon.map(example).join(" ")
-})
-//funcion filter
-// function filtrar(tipo){
-//     const look = data.pokemon.filter(poke => poke.type.includes(tipo));
-//     console.log(look)
-//   }
-//   filtrar("grass");
-// const buttonfiltrador =document.getElementById("filtrador");
-// buttonfiltrador.addEventListener("click", function(){
-//     console.log("soyunboton");
-// })
-// llamando al tipo
-const selectElement = document.querySelector('.tipo');
-selectElement.addEventListener()
+        let contenedorPadre = document.createElement('div');
+            contenedorPadre.classList.add("cardpokemon")
+        let numero = document.createElement('p');
+        //Hijo del contenedor principal
+        numero.textContent = '#'+ pokeNumero;
+        contenedorPadre.appendChild(numero);
+        
+        let imagen = document.createElement('img');
+        imagen.src = pokeImage;
+        contenedorPadre.appendChild(imagen);
+
+        let nombre = document.createElement('p');
+        nombre.textContent = pokeNombre;
+        contenedorPadre.appendChild(nombre);
+
+        let tipo = document.createElement('p');
+        tipo.textContent = mostrarTipo;
+        contenedorPadre.appendChild(tipo);
+
+        mostrarPokemon.appendChild(contenedorPadre);
+    }
+}
+buscarPokemon(pokeInfo);
+
+const filtro = document.querySelector('#tipo');
+filtro.addEventListener("change", (event) => {
+    const tipoSelec = event.target.value;
+    const resultado = filtrar(tipoSelec,pokeInfo);
+    buscarPokemon(resultado);
+} )
+//limpiar contenedor padre
