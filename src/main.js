@@ -48,6 +48,11 @@ const filtro = document.querySelector('#tipo');
 filtro.addEventListener("change", (event) => {
     const tipoSelec = event.target.value;
     const resultado = filtrar(tipoSelec,pokeInfo);
+    limpiarPokemon();
     buscarPokemon(resultado);
 } )
-//limpiar contenedor padre
+//limpiar 
+function limpiarPokemon(){
+    document.querySelector('#info').innerHTML="";
+
+}
