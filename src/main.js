@@ -18,20 +18,24 @@ function buscarPokemon(pokeInfo){
 
         let contenedorPadre = document.createElement('div');
             contenedorPadre.classList.add("cardpokemon")
-        let numero = document.createElement('p');
         //Hijo del contenedor principal
+            let numero = document.createElement('p');
+            numero.classList.add("pokemonnumero")
         numero.textContent = '#'+ pokeNumero;
         contenedorPadre.appendChild(numero);
         
         let imagen = document.createElement('img');
+            imagen.classList.add("pokemonimagen")
         imagen.src = pokeImage;
         contenedorPadre.appendChild(imagen);
 
         let nombre = document.createElement('p');
+            nombre.classList.add("pokemonnombre")
         nombre.textContent = pokeNombre;
         contenedorPadre.appendChild(nombre);
 
         let tipo = document.createElement('p');
+            tipo.classList.add("pokemontipo")
         tipo.textContent = mostrarTipo;
         contenedorPadre.appendChild(tipo);
 
