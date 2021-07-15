@@ -63,7 +63,7 @@ const botonSearch = document.querySelector('#searchPokemon');
 function insertPokemon(){
    //console.log(pokeInfo);
     //console.log("Presionaste buscar");
-    const pokeBusqueda = pokeInfo.filter(search => search.name.toLowerCase() == pokemon.value.trim().toLowerCase() || search.num == pokemon.value.trim());
+    const pokeBusqueda = pokeInfo.filter(search => search.name.toLowerCase() == pokemon.value.trim().toLowerCase() || parseInt(search.num) == pokemon.value.trim());
     //console.log(pokeBusqueda);
     limpiarPokemon();
     buscarPokemon(pokeBusqueda);
