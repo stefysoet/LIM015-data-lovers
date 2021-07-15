@@ -42,6 +42,13 @@ function buscarPokemon(pokeInfo){
         mostrarPokemon.appendChild(contenedorPadre);
     }
 }
+// const todosPokemon = pokeInfo.map(pokemon => {
+//     return pokemon;
+// });
+// const tipoTodo = document.querySelector('#todos');
+// tipoTodo.addEventListener("click", tipoTodo(todosPokemon));
+// //function todosPokemon(pokeInfo => pokemon.map(buscarPokemon));
+
 buscarPokemon(pokeInfo);
 
 const filtro = document.querySelector('#tipo');
@@ -57,17 +64,33 @@ function limpiarPokemon(){
 }
 
 //Probando busqueda
-let pokemon = document.getElementById('pokeName');
-const botonSearch = document.querySelector('#searchPokemon');
+// let pokemon = document.getElementById('pokeName');
+// const botonSearch = document.querySelector('#searchPokemon');
 
-function insertPokemon(){
-   //console.log(pokeInfo);
-    //console.log("Presionaste buscar");
-    const pokeBusqueda = pokeInfo.filter(search => search.name.toLowerCase() == pokemon.value.trim().toLowerCase() || parseInt(search.num) == pokemon.value.trim());
-    //console.log(pokeBusqueda);
-    limpiarPokemon();
-    buscarPokemon(pokeBusqueda);
+// function insertPokemon(){
+//    //console.log(pokeInfo);
+//     //console.log("Presionaste buscar");
+//     const pokeBusqueda = pokeInfo.filter(search => search.name.toLowerCase() == pokemon.value.trim().toLowerCase() || parseInt(search.num) == parseInt(pokemon.value.trim()));
+//     //console.log(pokeBusqueda);
+//     limpiarPokemon();
+//     buscarPokemon(pokeBusqueda);
 
-}
-botonSearch.addEventListener('click',insertPokemon);
-botonSearch.addEventListener('touchstart',insertPokemon); //para dispositivos moviles
+// }
+// botonSearch.addEventListener('click',insertPokemon);
+//botonSearch.addEventListener('touchstart',insertPokemon); //para dispositivos moviles 
+
+function buscadorPokemon(){
+    let ingresarDato = document.querySelector('#pokeName').value;
+    let guardarInfo;
+     if(isNaN(ingresarDato)){
+       guardarInfo = pokeInfo.filter((poke) => poke.name.includes(ingresarDato));
+     } 
+     else{
+       guardarInfo = pokeInfo.filter((poke) => parseInt(poke.num) == parseInt(ingresarDato));
+     }
+     limpiarPokemon();
+     buscarPokemon(guardarInfo);
+  }
+
+document.querySelector('#searchPokemon').addEventListener('click',function(){ buscadorPokemon();
+});
