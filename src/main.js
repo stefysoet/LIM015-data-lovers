@@ -54,5 +54,20 @@ filtro.addEventListener("change", (event) => {
 //limpiar 
 function limpiarPokemon(){
     document.querySelector('#info').innerHTML="";
+}
+
+//Probando busqueda
+let pokemon = document.getElementById('pokeName');
+const botonSearch = document.querySelector('#searchPokemon');
+
+function insertPokemon(){
+   //console.log(pokeInfo);
+    //console.log("Presionaste buscar");
+    const pokeBusqueda = pokeInfo.filter(search => search.name.toLowerCase() == pokemon.value.trim().toLowerCase() || search.num == pokemon.value.trim());
+    //console.log(pokeBusqueda);
+    limpiarPokemon();
+    buscarPokemon(pokeBusqueda);
 
 }
+botonSearch.addEventListener('click',insertPokemon);
+botonSearch.addEventListener('touchstart',insertPokemon); //para dispositivos moviles

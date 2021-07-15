@@ -11,7 +11,8 @@
   </head>
   <body>
     <header>
-      <nav><ul>
+      <nav>
+        <ul>
           <li><a href="#">INICIO</a></li>
           <li><a href="#">POKÉDEX</a></li>
           <li><a href="#">USUARIOS</a></li>
@@ -19,11 +20,11 @@
       </nav>
     </header>
     <main>
-      <section class="nombrepokemon">
-        <div class="nombre">
-          <label>Nombre</label>
-          <input type="text" id="buscar" />
-          <input type="submit" class="button" value="Buscar" id="search" />
+      <section>
+        <label>Pokémon: </label>
+        <input type="text" value="" id="pokeName" placeholder="Nombre pokemon o ID">
+        <div>
+          <button type="button" id="searchPokemon">Buscar</button>
         </div>
       </section>
       <section class="tipo-pokemon">
