@@ -19,10 +19,14 @@ function buscarPokemon(pokeInfo) {
     numero.textContent = "#" + pokeNumero;
     contenedorPadre.appendChild(numero);
 
+    let aRef = document.createElement("a");
+
     let imagen = document.createElement("img");
     imagen.classList.add("pokemonimagen");
     imagen.src = pokeImage;
-    contenedorPadre.appendChild(imagen);
+    aRef.appendChild(imagen);
+    aRef.href = "#" + pokeInfo[i].num;
+    contenedorPadre.appendChild(aRef);
 
     let nombre = document.createElement("p");
     nombre.classList.add("pokemonnombre");
@@ -34,16 +38,32 @@ function buscarPokemon(pokeInfo) {
     tipo.textContent = pokeTipo.join(" ");
     contenedorPadre.appendChild(tipo);
 
-    let verMas = document.createElement("a");
-    verMas.classList.add("masInfo");
-    verMas.textContent = "Ver más";
+    let seccionModal = document.createElement("section");
+    seccionModal.id = pokeInfo[i].num;
+    seccionModal.classList.add("modalDialog");
 
-    verMas.addEventListener("click", (e) => {
-      e.preventDefault();
-      fichaTecnica(pokeInfo[i]);
-    });
+    let seccionContenido = document.createElement("section");
+    let etiquetaA = document.createElement("a");
+    etiquetaA.classList.add("close");
+    etiquetaA.href = "#close";
+    etiquetaA.textContent = "X";
+    seccionContenido.appendChild(etiquetaA);
+    seccionModal.appendChild(seccionContenido);
+    let prueba = document.createElement("h3");
+    prueba.textContent = pokeInfo[i].about;
+    seccionContenido.appendChild(prueba);
+    contenedorPadre.appendChild(seccionModal);
 
-    nombre.appendChild(verMas);
+    // let verMas = document.createElement("a");
+    // verMas.classList.add("masInfo");
+    // verMas.textContent = "Ver más";
+
+    // verMas.addEventListener("click", (e) => {
+    //   e.preventDefault();
+    //   fichaTecnica(pokeInfo[i]);
+    // });
+
+    // nombre.appendChild(verMas);
     mostrarPokemon.appendChild(contenedorPadre);
   }
 }
@@ -102,34 +122,36 @@ document.querySelector("#searchPokemon").addEventListener("click", function () {
   buscadorPokemon();
 });
 
-function fichaTecnica(pokeInfo) {
-  document.querySelector("#info").style.display = "none";
-  document.querySelector("#contenedorFicha").style.display = "block";
-  // limpiarPokemon("#contenedorFicha");
-  //console.log(pokeInfo);
-  const fichaPoke = document.querySelector("#contenedorFicha");
-  const quickMove = pokeInfo["quick-move"].filter((movimiento) => {
-    return `<ul><li>${movimiento.name}</li>
-    <li>${movimiento.type}</li>
-    <li>${movimiento["base-damage"]}</li>
-    <li>${movimiento.energy}</li>
-    <li>${movimiento["move-duration"]}</li>
-    </ul>`;
-  });
-  const specialAttack = pokeInfo["special-attack"].filter((attack) => {
-    return `<ul><li>${attack.name}</li>
-    <li>${attack.type}</li>
-    <li>${attack["base-damage"]}</li>
-    <li>${attack.energy}</li>
-    <li>${attack["move-duration"]}</li>
-    </ul>`;
-  });
-  fichaPoke.innerHTML = `<section><p>${pokeInfo.name}
-  </p><img src="${pokeInfo.img}">
-  <p>"${pokeInfo.about}"</p>
-  <p>"${pokeInfo.resistant}"</p>
-  <p>"${pokeInfo.weaknesses}"</p>
-  <p>"${quickMove.join(" ")}"</p>
-  <p>"${specialAttack.join(" ")}"</p>
-  </section>`;
-}
+// function fichaTecnica(pokeInfo) {
+//   document.querySelector("#info").style.display = "none";
+//   document.querySelector("#contenedorFicha").style.display = "block";
+//   // limpiarPokemon("#contenedorFicha");
+//   //console.log(pokeInfo);
+//   const fichaPoke = document.querySelector("#contenedorFicha");
+//   const quickMove = pokeInfo["quick-move"].map((movimiento) => {
+//     return `<ul><li>${movimiento.name}</li>
+//     <li>${movimiento["type"]}</li>
+//     <li>${movimiento["base-damage"]}</li>
+//     <li>${movimiento["energy"]}</li>
+//     <li>${movimiento["move-duration-seg"]}</li>
+//     </ul>`;
+//   });
+//   console.log(quickMove);
+//   const specialAttack = pokeInfo["special-attack"].map((attack) => {
+//     return `<ul><li>${attack.name}</li>
+//     <li>${attack["type"]}</li>
+//     <li>${attack["base-damage"]}</li>
+//     <li>${attack["energy"]}</li>
+//     <li>${attack["move-duration-seg"]}</li>
+//     </ul>`;
+//   });
+//   fichaPoke.innerHTML = `<section class="fichaP">
+//   <p id="nombreF">${pokeInfo.name}</p>
+//   <p id="imgn"><img src="${pokeInfo.img}"></p>
+//   <p id="resumen">"${pokeInfo.about}"</p>
+//   <p>"${pokeInfo.resistant}"</p>
+//   <p>"${pokeInfo.weaknesses}"</p>
+//   <p>"${quickMove.join()}"</p>
+//   <p>"${specialAttack.join()}"</p>
+//   </section>`;
+// }
