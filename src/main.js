@@ -4,7 +4,6 @@ const pokeInfo = data.pokemon;
 
 function buscarPokemon(pokeInfo) {
   const mostrarPokemon = document.querySelector("#info");
-  //console.log(pokeInfo);
   for (let i = 0; i < pokeInfo.length; i++) {
     const pokeImage = pokeInfo[i].img;
     const pokeNombre = pokeInfo[i].name;
@@ -60,25 +59,9 @@ function buscarPokemon(pokeInfo) {
     seccionContenido.appendChild(resumen);
     contenedorPadre.appendChild(seccionModal);
 
-    // let verMas = document.createElement("a");
-    // verMas.classList.add("masInfo");
-    // verMas.textContent = "Ver más";
-
-    // verMas.addEventListener("click", (e) => {
-    //   e.preventDefault();
-    //   fichaTecnica(pokeInfo[i]);
-    // });
-
-    // nombre.appendChild(verMas);
     mostrarPokemon.appendChild(contenedorPadre);
   }
 }
-// const todosPokemon = pokeInfo.map(pokemon => {
-//     return pokemon;
-// });
-// const tipoTodo = document.querySelector('#todos');
-// tipoTodo.addEventListener("click", tipoTodo(todosPokemon));
-// //function todosPokemon(pokeInfo => pokemon.map(buscarPokemon));
 
 buscarPokemon(pokeInfo);
 
@@ -89,26 +72,10 @@ filtro.addEventListener("change", (event) => {
   limpiarPokemon();
   buscarPokemon(resultado);
 });
-//limpiar
+
 function limpiarPokemon() {
   document.querySelector("#info").innerHTML = "";
 }
-
-//Probando busqueda
-// let pokemon = document.getElementById('pokeName');
-// const botonSearch = document.querySelector('#searchPokemon');
-
-// function insertPokemon(){
-//    //console.log(pokeInfo);
-//     //console.log("Presionaste buscar");
-//     const pokeBusqueda = pokeInfo.filter(search => search.name.toLowerCase() == pokemon.value.trim().toLowerCase() || parseInt(search.num) == parseInt(pokemon.value.trim()));
-//     //console.log(pokeBusqueda);
-//     limpiarPokemon();
-//     buscarPokemon(pokeBusqueda);
-
-// }
-// botonSearch.addEventListener('click',insertPokemon);
-//botonSearch.addEventListener('touchstart',insertPokemon); //para dispositivos moviles
 
 function buscadorPokemon() {
   let ingresarDato = document.querySelector("#pokeName").value;
@@ -127,37 +94,3 @@ function buscadorPokemon() {
 document.querySelector("#searchPokemon").addEventListener("click", function () {
   buscadorPokemon();
 });
-
-// function fichaTecnica(pokeInfo) {
-//   document.querySelector("#info").style.display = "none";
-//   document.querySelector("#contenedorFicha").style.display = "block";
-//   // limpiarPokemon("#contenedorFicha");
-//   //console.log(pokeInfo);
-//   const fichaPoke = document.querySelector("#contenedorFicha");
-//   const quickMove = pokeInfo["quick-move"].map((movimiento) => {
-//     return `<ul><li>${movimiento.name}</li>
-//     <li>${movimiento["type"]}</li>
-//     <li>${movimiento["base-damage"]}</li>
-//     <li>${movimiento["energy"]}</li>
-//     <li>${movimiento["move-duration-seg"]}</li>
-//     </ul>`;
-//   });
-//   console.log(quickMove);
-//   const specialAttack = pokeInfo["special-attack"].map((attack) => {
-//     return `<ul><li>${attack.name}</li>
-//     <li>${attack["type"]}</li>
-//     <li>${attack["base-damage"]}</li>
-//     <li>${attack["energy"]}</li>
-//     <li>${attack["move-duration-seg"]}</li>
-//     </ul>`;
-//   });
-//   fichaPoke.innerHTML = `<section class="fichaP">
-//   <p id="nombreF">${pokeInfo.name}</p>
-//   <p id="imgn"><img src="${pokeInfo.img}"></p>
-//   <p id="resumen">"${pokeInfo.about}"</p>
-//   <p>"${pokeInfo.resistant}"</p>
-//   <p>"${pokeInfo.weaknesses}"</p>
-//   <p>"${quickMove.join()}"</p>
-//   <p>"${specialAttack.join()}"</p>
-//   </section>`;
-// }
