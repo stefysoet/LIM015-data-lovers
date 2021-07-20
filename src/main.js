@@ -108,12 +108,28 @@ function fichaTecnica(pokeInfo) {
   // limpiarPokemon("#contenedorFicha");
   //console.log(pokeInfo);
   const fichaPoke = document.querySelector("#contenedorFicha");
+  const quickMove = pokeInfo["quick-move"].filter((movimiento) => {
+    return `<ul><li>${movimiento.name}</li>
+    <li>${movimiento.type}</li>
+    <li>${movimiento["base-damage"]}</li>
+    <li>${movimiento.energy}</li>
+    <li>${movimiento["move-duration"]}</li>
+    </ul>`;
+  });
+  const specialAttack = pokeInfo["special-attack"].filter((attack) => {
+    return `<ul><li>${attack.name}</li>
+    <li>${attack.type}</li>
+    <li>${attack["base-damage"]}</li>
+    <li>${attack.energy}</li>
+    <li>${attack["move-duration"]}</li>
+    </ul>`;
+  });
   fichaPoke.innerHTML = `<section><p>${pokeInfo.name}
   </p><img src="${pokeInfo.img}">
   <p>"${pokeInfo.about}"</p>
   <p>"${pokeInfo.resistant}"</p>
   <p>"${pokeInfo.weaknesses}"</p>
-  <p>"${pokeInfo["quick-move"]}"</p>
-  <p>"${pokeInfo["special-attack"]}"</p>
+  <p>"${quickMove.join(" ")}"</p>
+  <p>"${specialAttack.join(" ")}"</p>
   </section>`;
 }
