@@ -1,18 +1,18 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background: honeydew;
   font-family: sans-serif;
   font-size: 15px;
 }
-.nombre{
+.nombre {
   font-family: sans-serif;
-  font-size:20px;
+  font-size: 20px;
 }
-ul{
+ul {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -20,68 +20,73 @@ ul{
   display: flex;
   background-color: rgb(190, 226, 190);
 }
-li{
+li {
   flex: auto;
   border-right: 2px solid;
   text-align: center;
-
 }
-a{
+a {
   color: black;
   text-decoration: none;
   line-height: 3;
   display: block;
-  }
-  a:hover{
-    background: rgba(#000,.2);
-  }
-  footer{
-    font-size: 17px;
-    text-align: center;
-    margin: 45px;
-  }
-  /*estilo visualizacion del pokemon(flexbox)*/
-  #info{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .cardpokemon{
-    width:260px;
-    height: 350px;
-    background-color: rebeccapurple;
-    box-shadow: 0 1.5rem 4rem rgba(0,0,0, 0.8);
-    margin: 20px 20px;
-    text-align: center;
-    border-radius: 10px;
-  }
-  .pokemonimagen{
-    width: 90%;
-    height: 45%;
-    display: flex;
-    align-items: center;
-  }
-  .pokemonimagen:hover{
-    width: 100%;
-    margin-top: 22.5px;
-    z-index: 20;
-    transform: rotate(-8deg);
-  }
-  .pokemonnombre{
-    font-family: sans-serif;
-    font-size: 30px;
-    color: antiquewhite;
-  }
-  .pokemontipo{
-    font-family: 'Arial Narrow';
-    font-size: 30px;
-    color: navajowhite;
-  }
-  /*PREGUNTAR*/
-  .pokemonnumero{
-    font-family: 'Gill Sans';
-    font-size: 40px;
-    color: #fff;
-  }
-  
+}
+a:hover {
+  background: rgba(#000, 0.2);
+}
+footer {
+  font-size: 17px;
+  text-align: center;
+  margin: 45px;
+}
+/*estilo visualizacion del pokemon(flexbox)*/
+#info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.cardpokemon {
+  width: 260px;
+  height: 350px;
+  background-color: rebeccapurple;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.8);
+  margin: 20px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+.pokemonimagen {
+  width: 90%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+}
+.pokemonimagen:hover {
+  width: 100%;
+  margin-top: 22.5px;
+  z-index: 20;
+  transform: rotate(-8deg);
+}
+.pokemonnombre {
+  font-family: sans-serif;
+  font-size: 30px;
+  color: antiquewhite;
+}
+.pokemontipo {
+  font-family: "Arial Narrow";
+  font-size: 30px;
+  color: navajowhite;
+}
+/*PREGUNTAR*/
+.pokemonnumero {
+  font-family: "Gill Sans";
+  font-size: 40px;
+  color: #fff;
+}
+#contenedorFicha {
+  display: none;
+}
+.masInfo {
+  color: blue;
+  cursor: hand;
+}

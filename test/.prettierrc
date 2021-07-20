@@ -1,0 +1,10 @@
+{
+    "alignObjectProperties": true,
+    "arrayExpand": true,
+    "arrowParens": "always",
+    "jsBracketSameLine": true,
+    "jsSingleQuote": true,
+    "printWidth": 100,
+    "singleQuote": true,
+    "tabWidth": 2
+}
