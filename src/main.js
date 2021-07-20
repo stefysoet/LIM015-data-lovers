@@ -108,6 +108,12 @@ function fichaTecnica(pokeInfo) {
   // limpiarPokemon("#contenedorFicha");
   //console.log(pokeInfo);
   const fichaPoke = document.querySelector("#contenedorFicha");
-  fichaPoke.innerHTML = `<section><p>${pokeInfo.name}</p><img src="${pokeInfo.img}">
+  fichaPoke.innerHTML = `<section><p>${pokeInfo.name}
+  </p><img src="${pokeInfo.img}">
+  <p>"${pokeInfo.about}"</p>
+  <p>"${pokeInfo.resistant}"</p>
+  <p>"${pokeInfo.weaknesses}"</p>
+  <p>"${pokeInfo["quick-move"]}"</p>
+  <p>"${pokeInfo["special-attack"]}"</p>
   </section>`;
 }
