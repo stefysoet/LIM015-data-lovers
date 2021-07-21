@@ -48,12 +48,16 @@ function buscarPokemon(pokeInfo) {
     etiquetaA.textContent = "X";
     seccionContenido.appendChild(etiquetaA);
     seccionModal.appendChild(seccionContenido);
+
     let nombreP = document.createElement("h3");
     nombreP.textContent = pokeInfo[i].name;
+
     let imagenP = document.createElement("img");
-    imagenP.textContent = pokeInfo[i].img;
+    imagenP.src = pokeInfo[i].img;
+
     let resumen = document.createElement("p");
     resumen.textContent = pokeInfo[i].about;
+
     seccionContenido.appendChild(nombreP);
     seccionContenido.appendChild(imagenP);
     seccionContenido.appendChild(resumen);
