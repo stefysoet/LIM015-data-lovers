@@ -157,6 +157,14 @@ main {
   cursor: pointer;
   display: inline;
 }
+#region {
+  padding: 8px 12px;
+  color: black;
+  background-color: rgb(133, 141, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline;
+}
 footer {
   font-size: 17px;
   text-align: center;

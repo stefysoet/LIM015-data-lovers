@@ -1,4 +1,4 @@
-import { filtrar } from "./data.js";
+import { filtrar, verRegion } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 const pokeInfo = data.pokemon;
 
@@ -60,9 +60,13 @@ function buscarPokemon(pokeInfo) {
     let resumen = document.createElement("p");
     resumen.textContent = pokeInfo[i].about;
 
+    let pokeStats = document.createElement("p");
+    pokeStats.textContent = pokeInfo[i].stats;
+
     seccionContenido.appendChild(nombreP);
     seccionContenido.appendChild(imagenP);
     seccionContenido.appendChild(resumen);
+    seccionContenido.appendChild(pokeStats);
     contenedorPadre.appendChild(seccionModal);
     mostrarPokemon.appendChild(contenedorPadre);
   }
@@ -78,6 +82,14 @@ filtro.addEventListener("change", (event) => {
   buscarPokemon(resultado);
 });
 
+//Consultar, debo ingresar al objeto primero
+const region = document.querySelector("#region");
+region.addEventListener("change", (event) => {
+  const generacionR = event.target.value;
+  const generacionResultado = verRegion(generacionR, pokeInfo);
+  limpiarPokemon();
+  buscarPokemon(generacionResultado);
+});
 // //Intentando obtener valor
 // sortValores.addEventListener(change, (e) => {
 //   let sortValores = e.currentTargert.value;
@@ -105,3 +117,13 @@ function buscadorPokemon() {
 document.querySelector("#searchPokemon").addEventListener("click", function () {
   buscadorPokemon();
 });
+
+// function ordenarPokemon(a,b) {
+//   if(a es menor que b){
+//     return -1;
+//   }
+//   if(a es mayor que b){
+//     return 1;
+//   }
+//   return 0;
+// }
