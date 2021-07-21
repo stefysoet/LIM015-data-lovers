@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">INICIO</a></li>
-          <li><a href="#">POKÉDEX</a></li>
-          <li><a href="#">USUARIOS</a></li>
-        </ul>
-      </nav>
+    <header class="container">
+      <ul class="menu_items">
+        <li class="cont_inicio" id="inicio"><a href="#"> INICIO </a></li>
+        <li class="cont_pokedex" id="pokedex"><a href="#"> POKÉDEX </a></li>
+        <li class="cont_usuarios" id="usuarios"><a href="#"> USUARIOS </a></li>
+      </ul>
+      <span class="btn_menu">
+        <i class="fas fa-align-justify"></i>
+      </span>
     </header>
     <main>
       <section>
@@ -59,13 +60,6 @@
               <option value="descendente">Z-A</option>
             </select>
           </div>
-        </div>
-      </section>
-      <section class="maspokemon">
-        <div class="pokémon">
-          <a href="" id="pokémon">
-            <span>Cargar más Pokémon</span>
-          </a>
         </div>
       </section>
       <section id="info"></section>
