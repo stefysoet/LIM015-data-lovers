@@ -259,7 +259,7 @@ footer {
   margin: 10% auto;
   padding: 20px;
   border-radius: 3px;
-  background: #fff;
+  background: rgb(181, 255, 255);
 }
 .close {
   font-family: Arial, Helvetica, sans-serif;
@@ -284,4 +284,8 @@ footer {
 }
 .close:hover {
   background: #fa3f6f;
+}
+.imgPoke {
+  width: 200px;
+  filter: drop-shadow(0 5px 3px black);
 }

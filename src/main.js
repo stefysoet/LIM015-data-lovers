@@ -18,6 +18,7 @@ function buscarPokemon(pokeInfo) {
     numero.textContent = "#" + pokeNumero;
     contenedorPadre.appendChild(numero);
 
+    //Creando Modal para Ficha Tecnica
     let aRef = document.createElement("a");
 
     let imagen = document.createElement("img");
@@ -53,6 +54,7 @@ function buscarPokemon(pokeInfo) {
     nombreP.textContent = pokeInfo[i].name;
 
     let imagenP = document.createElement("img");
+    imagenP.classList.add("imgPoke");
     imagenP.src = pokeInfo[i].img;
 
     let resumen = document.createElement("p");
@@ -62,7 +64,6 @@ function buscarPokemon(pokeInfo) {
     seccionContenido.appendChild(imagenP);
     seccionContenido.appendChild(resumen);
     contenedorPadre.appendChild(seccionModal);
-
     mostrarPokemon.appendChild(contenedorPadre);
   }
 }
@@ -76,6 +77,12 @@ filtro.addEventListener("change", (event) => {
   limpiarPokemon();
   buscarPokemon(resultado);
 });
+
+// //Intentando obtener valor
+// sortValores.addEventListener(change, (e) => {
+//   let sortValores = e.currentTargert.value;
+//   console.log(sortValores);
+// });
 
 function limpiarPokemon() {
   document.querySelector("#info").innerHTML = "";
