@@ -1,4 +1,4 @@
-import { filtrar, verRegion } from "./data.js";
+import { filtrar, verRegion, ordenaNombre } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 const pokeInfo = data.pokemon;
 
@@ -61,8 +61,7 @@ function buscarPokemon(pokeInfo) {
     resumen.textContent = pokeInfo[i].about;
 
     let pokeStats = document.createElement("p");
-    pokeStats.textContent = pokeInfo[i].stats;
-
+    pokeStats.textContent = `${pokeInfo[i].stats["base-attack"]}`;
     seccionContenido.appendChild(nombreP);
     seccionContenido.appendChild(imagenP);
     seccionContenido.appendChild(resumen);
@@ -82,6 +81,15 @@ filtro.addEventListener("change", (event) => {
   buscarPokemon(resultado);
 });
 
+//Asignando variable para Ordenar
+const ordenarPokemon = document.getElementById("orden");
+ordenarPokemon.addEventListener("change", (e) => {
+  let ascDesc = e.target.value;
+  const resultadoAsc = ordenaNombre(ascDesc, pokeInfo);
+  limpiarPokemon();
+  buscarPokemon(resultadoAsc);
+});
+
 //Consultar, debo ingresar al objeto primero
 const region = document.querySelector("#region");
 region.addEventListener("change", (event) => {
@@ -90,6 +98,7 @@ region.addEventListener("change", (event) => {
   limpiarPokemon();
   buscarPokemon(generacionResultado);
 });
+
 // //Intentando obtener valor
 // sortValores.addEventListener(change, (e) => {
 //   let sortValores = e.currentTargert.value;
