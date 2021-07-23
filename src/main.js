@@ -52,6 +52,8 @@ const displayMain = (id) => {
     } 
 };
 
+//POKÉX 
+
 const pokeInfo = data.pokemon;
 function buscarPokemon(pokeInfo) {
   const mostrarPokemon = document.querySelector("#info");
