@@ -82,7 +82,7 @@ filtro.addEventListener("change", (event) => {
 });
 
 //Asignando variable para Ordenar
-const ordenarPokemon = document.getElementById("orden");
+const ordenarPokemon = document.querySelector("#orden");
 ordenarPokemon.addEventListener("change", (e) => {
   let ascDesc = e.target.value;
   const resultadoAsc = ordenaNombre(ascDesc, pokeInfo);
