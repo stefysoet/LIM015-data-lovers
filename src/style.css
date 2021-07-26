@@ -29,7 +29,11 @@ body {
     rgba(24, 138, 141, 1) 11.2%,
     rgba(96, 221, 142, 1) 91.1%
   ); */
-  background-color: #4e73d2;
+  background-image: radial-gradient(
+    circle farthest-corner at 22.4% 21.7%,
+    rgba(4, 189, 228, 1) 0%,
+    rgba(2, 83, 185, 1) 100.2%
+  );
   width: 100%;
   height: 100px;
   display: flex;
@@ -406,8 +410,8 @@ ul.show {
   margin: 1.5rem;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid rgb(60, 73, 255);
-  border-top: 2px solid rgb(133, 141, 255);
+  border: 1px solid #0077ff;
+  background-color: #c2c9d167;
   border-radius: 25px;
   line-height: 1.2rem;
   font-size: 1rem;
@@ -435,10 +439,11 @@ ul.show {
 #tipo {
   padding: 8px 12px;
   color: black;
-  background-color: #c2c9d1;
+  background-color: #c2c9d167;
   border-radius: 5px;
   cursor: pointer;
   display: inline;
+  border: 1px solid #0077ff;
 }
 /* .ordenF {
     align-items: right;
@@ -446,18 +451,20 @@ ul.show {
 #orden {
   padding: 8px 12px;
   color: black;
-  background-color: #c2c9d1;
+  background-color: #c2c9d167;
   border-radius: 5px;
   cursor: pointer;
   display: inline;
+  border: 1px solid #0077ff;
 }
 #region {
   padding: 8px 12px;
   color: black;
-  background-color: #c2c9d1;
+  background-color: #c2c9d167;
   border-radius: 5px;
   cursor: pointer;
   display: inline;
+  border: 1px solid #0077ff;
 }
 
 /*estilo visualizacion del pokemon(flexbox)*/
@@ -471,8 +478,8 @@ ul.show {
 .cardpokemon {
   width: 250px;
   height: 300px;
-  background-color: rgb(55, 65, 158);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 1);
+  background-color: #fff2df;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
   margin: 30px 20px;
   text-align: center;
   border-radius: 10px;
@@ -481,43 +488,44 @@ ul.show {
   width: 55%;
   height: 40%;
   align-items: center;
-  filter: drop-shadow(0 5px 3px black);
+  border-radius: 70%;
+  background-color: white;
 }
 .pokemonimagen:hover {
   width: 60%;
   height: 40%;
   z-index: 20;
   align-items: center;
-  transform: rotate(-9deg);
+  transform: translateY(-10px);
 }
 .pokemonnombre {
   margin: 2.5px;
   letter-spacing: 0.5px;
   font-family: "sans-serif";
   font-size: 25px;
-  color: antiquewhite;
+  color: black;
 }
 .pokemontipo {
   margin: 2.5px;
   letter-spacing: 0.5px;
   font-family: "Arial Narrow";
   font-size: 25px;
-  color: navajowhite;
+  color: black;
 }
 /*PREGUNTAR*/
 .pokemonnumero {
   font-family: "caveat";
   font-weight: bold;
   font-size: 25px;
-  color: rgb(55, 65, 158);
-  background-color: #f6aac7;
+  color: white;
+  background-color: #00a7f7;
   position: relative;
-  top: -25px;
+  top: -45px;
   left: 0;
   padding: 5px 5px;
   margin: 2px -1px;
   border-radius: 5px;
-  filter: drop-shadow(0 2px 2px #f6aac7);
+  filter: drop-shadow(0 2px 2px #a7edf6);
 }
 /* The Modal (background) */
 .modal {
