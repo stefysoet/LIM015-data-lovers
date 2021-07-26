@@ -1,6 +1,8 @@
 import { filtrar, verRegion, ordenaNombre } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
+const pokeInfo = data.pokemon;
+
 addEventListener("DOMContentLoaded", () => {
   const btn_menu = document.querySelector(".btn_menu");
   if (btn_menu) {
@@ -52,7 +54,6 @@ const displayMain = (id) => {
 
 //POKÉX
 
-const pokeInfo = data.pokemon;
 function buscarPokemon(pokeInfo) {
   const mostrarPokemon = document.querySelector("#info");
   for (let i = 0; i < pokeInfo.length; i++) {
