@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link
-      rel="shortcut icon"
-      href="https://pokemongolive.com/img/icons/favicon.ico"
-    />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="https://pokemongolive.com/img/icons/favicon.ico"/>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <script src="https://kit.fontawesome.com/067c579e45.js"></script>
-    <title>Pokémon</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <title>Pokémon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
   <body>
-    <!-- HEADER / MENÚ -->
+
     <header>
       <nav class="container">
         <div>
@@ -28,37 +25,44 @@
         </label>
       </nav>
     </header>
-    <!-- INICIO -->
+
+    
+<!-- INICIO -->
   <main class="main-inicio" id="nav_inicio" style="display: block;">
     <div  class="inicio">
       <div class="fila">
         <div class="columna-2-3">
           <div class="fila">
             <div class="columna-60">     
-              <div class="small1">
+              <div class="small1" id="img_Inicio">
                 <img src="imagenes/información.jpg" alt="" class="galeria_inicio">
                 <p class="texto_inicio">Bienvenidos al mundo POKÉMON, donde encontras a tus amigos pokémon.</p>
               </div>
             </div>
+            
             <div class="columna-40">
-              <div class="small2">
+              <div class="small2" id="img_Inicio2">
                 <img src="imagenes/recomendaciones.jpg" alt="" class="galeria_inicio">
                 <p class="texto_inicio">Evoluciones que tienen antes y después tus pokémon.</p>
               </div>
             </div>
           </div>
-          <div class="normal">
+
+
+          <div class="normal" id="img_Inicio3">
             <img src="imagenes/top10.jpg" alt="" class="galeria_inicio">
               <h3 class="texto_inicio2">TOP 10</h3>
               <p class="texto_inicio">Los pokémon mas poderosos</p>
           </div>
         </div>
+
         <div class="columna-1-3">
-          <div  class="large">
+          <div  class="large" id="img_Inicio4">
             <img  src="imagenes/serie.jpg" alt="" class="galeria_inicio">
             <p class="texto_inicio">La temporada 23 del anime de Pokémon vuelve este mes de julio a la plataforma Netflix con un total de 48 episodios con las avenutras de Ash y Goh.</p>
           </div>
-          <div class="small3">
+
+          <div class="small3" id="img_Inicio5">
             <img src="imagenes/pelicula.jpg" alt="" class="galeria_inicio">
               <h3 class="texto_inicio2">Pokémon: Detective Pikachu (2019)</h3>
               <p class="texto_inicio">Tim y Pikachu inician una aventurada investigación para descubrir el paradero del detective Harry.</p>
@@ -67,7 +71,7 @@
       </div>
     </div> 
   </main>
-    <!-- POKÉDEX -->
+<!-- POKÉDEX -->
 <main  id="nav_pokedex" style="display: none;">
   <section>
     <div>
@@ -123,28 +127,30 @@
   <div id="contenedorFicha"></div>
 </main>
 <!-- USUARIOS -->
-<main class="main-usuarios" id="nav_usuarios" style="display: none;">
-  <h1 class="titulo_usuarios"> Nuestros clientes hablan </h1>
-  <div class="usuarios">
-    <div class="usuario">
-    <img src="imagenes/usuario1.jpg">
-    <p class="texto-encima">Esta página esta cool.</p>
+  <main class="main-usuarios" id="nav_usuarios" style="display: none;">
+    <h1 class="titulo_usuarios"> Nuestros clientes hablan </h1>
+    <div class="usuarios">
+      <div class="usuario">
+      <img src="imagenes/usuario1.jpg">
+      <p class="texto-encima">Esta página esta cool.</p>
+      </div>
+      <div class="usuario">
+        <img src="imagenes/usuario2.jpg">
+        <p class="texto-encima">No creí encontrar una página que tenga todos estos filtros.</p>
+      </div>
+      <div class="usuario">
+        <img src="imagenes/usuario3.jpg">
+        <p class="texto-encima">La página es muy amigable, a mi hijo le gusta.</p>
+      </div>
     </div>
-    <div class="usuario">
-      <img src="imagenes/usuario2.jpg">
-      <p class="texto-encima">No creí encontrar una página que tenga todos estos filtros.</p>
-    </div>
-    <div class="usuario">
-      <img src="imagenes/usuario3.jpg">
-      <p class="texto-encima">La página es muy amigable, a mi hijo le gusta.</p>
-    </div>
-  </div>
-</main>
-    <!-- FOOTER -->
+  </main>
+<!-- footer -->
   <footer class="footer">
+    
     <div class="container_footer">
       <img class="logo2" src="imagenes/logo.jpg" alt="">
       <div class="menu_footer">
+        
       <ul>
         <li class="quick_items"> INICIO </li>
         <li class="quick_items"> POKÉDEX </li>
@@ -162,10 +168,10 @@
       </div>
     </div>
     <div class="texto_footer">
-    2021 LABORATORIA LIM015 | Yuliana and Estefany
+    &copy; 2021 LABORATORIA LIM015 | Yuliana and Estefany
   </div>
   </footer>
   <div id="root"></div>
-    <script src="main.js" type="module"></script>
+  <script src="main.js" type="module"></script>
   </body>
 </html>
