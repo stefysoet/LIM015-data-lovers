@@ -147,7 +147,11 @@ ul.show {
 
 /* INICIO */
 
-#img_inicio {
+#img_Inicio,
+#img_Inicio2,
+#img_Inicio3,
+#img_Inicio4,
+#img_Inicio5 {
   position: relative;
   display: inline-block;
   text-align: center;
