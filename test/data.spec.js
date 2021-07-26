@@ -5,9 +5,3 @@
 //import data from '../src/data/pokemon/pokemon.js';
 //probando
 //expect().toBe('function');
-
-//it('returns ´´', () => {
-//   it(' ´´ ', () => {
-//     expect().toBe('');
-//   });
-// });
