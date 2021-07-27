@@ -2,7 +2,12 @@
 
 ## Índice
 
+<<<<<<< HEAD
 - [1. Resumen del proyecto](#1-resumen-del-proyecto)
+=======
+- [1. Preámbulo](#1-preámbulo)
+- [2. Resumen del proyecto](#2-resumen-del-proyecto)
+>>>>>>> 9235060a8ca487384bf8d00de5ce05544a7c2ef4
 - [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 - [4. Consideraciones generales](#4-consideraciones-generales)
 - [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -13,25 +18,7 @@
 
 ---
 
-## 1. Preámbulo
-
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
-
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
-
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
-
-## 2. Resumen del proyecto
+Resumen del proyecto
 
 En este proyecto **construirás una _página web_ para visualizar un
 _conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
@@ -61,6 +48,7 @@ Estos son datos que te proponemos:
 
   - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
 
+<<<<<<< HEAD
 - [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
   Este set de datos muestra la lista de campeones en una liga del
   juego League of Legends (LoL).
@@ -78,6 +66,8 @@ Estos son datos que te proponemos:
   olímpiadas de Río de Janeiro.
   - [Investigación con interesados en juegos olímpicos de Río de Janeiro](/src/data/athletes/README.md)
 
+=======
+>>>>>>> 9235060a8ca487384bf8d00de5ce05544a7c2ef4
 ## 3. Objetivos de aprendizaje
 
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
@@ -145,22 +135,36 @@ Los criterios para considerar que has completado este proyecto son:
 
 ### Definición del producto
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+## PokéCards
 
-### Historias de usuario
+PokeCards es una website complementaria para los jugadores del PokemonGO, que desean conocer información adicional acerca de los pokemones para mejorar su desempeño en el juego.
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
+Investigación UX
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
+Usuarios
 
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
+Jugadores de PokemonGO y personas que quieren iniciarse en el juego.
+
+Necesidades del Usuario
+
+• Los Pokémon tienen características únicas que determinan las decisiones que toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
+• Un maestro Pokémon antes de salir a cazar los Pokémon tienen que: saber el top 10 de frecuencia de aparición de los Pokémon.
+• Los Pokémon tienen distintos tipos y debilidades de combate. Estas características son importantes cuando un maestro Pokémon elige al Pokémon más adecuado para su batalla. Hay veces que tiene que elegir a los que tienen menos cantidad de debilidades y saber de qué tipo son. Por ello, es importante para un maestro Pokémon poder ordenarlos por estas 2 caracteristicas.
+“Yo jugador de PokemonGO quiero saber el top 10 de los Pokémon, ya sea por la característica de mi preferencia.”
+
+“Yo como jugador de PokemonGO quiero filtrar por tipo, región y por orden alfabético para conocer que Pokémon hay por región y sus datos.”
+• Criterios de aceptación:
+
+1. Ingresar a la Pokedex
+2. Filtrar por Tipo
+3. Filtrar por región
+4. Ordenar alfabéticamente.
+
+5. Ubicarse en la página de Inicio y poder ver el Top 10.
+6. Poder acceder a información despegable de las características del Pokemon.
+
+7. Ubicarse en la página de Inicio y poder ver el Top 10.
+8. Poder acceder a información despegable de las características del Pokemon.
 
 ### Diseño de la Interfaz de Usuario
 
@@ -375,8 +379,13 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
    repositorio de su compañera** y
    [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
    hacia el mismo.
+<<<<<<< HEAD
 2. :arrow*down: [Clona](https://help.github.com/articles/cloning-a-repository/)
    tu \_fork* a tu computadora (copia local).
+=======
+2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
+   tu _fork_ a tu computadora (copia local).
+>>>>>>> 9235060a8ca487384bf8d00de5ce05544a7c2ef4
 3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
    asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
 4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
