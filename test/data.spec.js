@@ -9,13 +9,6 @@ const pokemonMock = {
         num: 'generation i',
         name: 'kanto',
       },
-      about:
-        "There is a bud on this Pokémon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.",
-      img: 'https://www.serebii.net/pokemongo/pokemon/002.png',
-      size: {
-        height: '0.99 m',
-        weight: '13.0 kg',
-      },
       'pokemon-rarity': 'normal',
       type: ['grass', 'poison'],
       encounter: {
@@ -98,13 +91,6 @@ const pokemonMock = {
         num: 'generation i',
         name: 'kanto',
       },
-      about:
-        'Abra sleeps for eighteen hours a day. However, it can sense the presence of foes even while it is sleeping. In such a situation, this Pokémon immediately teleports to safety.',
-      img: 'https://www.serebii.net/pokemongo/pokemon/063.png',
-      size: {
-        height: '0.89 m',
-        weight: '19.5 kg',
-      },
       'pokemon-rarity': 'normal',
       type: ['psychic'],
       encounter: {
@@ -186,13 +172,6 @@ const pokemonMock = {
       generation: {
         num: 'generation i',
         name: 'kanto',
-      },
-      about:
-        'Zubat remains quietly unmoving in a dark spot during the bright daylight hours. It does so because prolonged exposure to the sun causes its body to become slightly burned.',
-      img: 'https://www.serebii.net/pokemongo/pokemon/041.png',
-      size: {
-        height: '0.79 m',
-        weight: '7.5 kg',
       },
       'pokemon-rarity': 'normal',
       type: ['poison', 'flying'],
@@ -283,13 +262,6 @@ const pokemonMock = {
         num: 'generation ii',
         name: 'johto',
       },
-      about:
-        'In battle, Chikorita waves its leaf around to keep the foe at bay. However, a sweet fragrance also wafts from the leaf, becalming the battling Pokémon and creating a cozy, friendly atmosphere all around.',
-      img: 'https://www.serebii.net/pokemongo/pokemon/152.png',
-      size: {
-        height: '0.89 m',
-        weight: '6.4 kg',
-      },
       'pokemon-rarity': 'normal',
       type: ['grass'],
       encounter: {
@@ -371,13 +343,6 @@ const pokemonMock = {
       generation: {
         num: 'generation ii',
         name: 'johto',
-      },
-      about:
-        'Togetic is said to be a Pokémon that brings good fortune. When the Pokémon spots someone who is pure of heart, it is said to appear and share its happiness with that person.',
-      img: 'https://www.serebii.net/pokemongo/pokemon/176.png',
-      size: {
-        height: '0.61 m',
-        weight: '3.2 kg',
       },
       'pokemon-rarity': 'normal',
       type: ['fairy', 'flying'],
@@ -497,10 +462,14 @@ describe('verRegion', () => {
 
 //TEST FILTRAR POR TIPO
 describe('filtrar', () => {
-  const pokemonType = pokemonMock.pokemon.filter((pokemon) => pokemon.type.includes('fire'));
+  const pokemonType = pokemonMock.pokemon.filter((poke) => poke.type.includes('fire'));
 
-  it('Es una funcion', () => {
+  it('Es una función', () => {
     expect(typeof filtrar).toBe('function');
+  });
+
+  it('Filtra los pokemon', () => {
+    expect(filtrar(pokemonMock.pokemon, '')).toEqual(pokemonMock.pokemon);
   });
 
   it('Filtra los pokemon de tipo fuego', () => {
