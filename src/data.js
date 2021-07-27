@@ -1,6 +1,5 @@
 //funcion filter
 export function filtrar(tipoSelec, pokeInfo) {
-  console.log (tipoSelec);
   return pokeInfo.filter((poke) => poke.type.includes(tipoSelec));
 }
 export function verRegion(region, pokeInfo) {
