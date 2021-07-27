@@ -1,9 +1,13 @@
-# Data Lovers
+# POKÉCARDS
 
 ## Índice
 
+<<<<<<< HEAD
+- [1. Resumen del proyecto](#1-resumen-del-proyecto)
+=======
 - [1. Preámbulo](#1-preámbulo)
 - [2. Resumen del proyecto](#2-resumen-del-proyecto)
+>>>>>>> 9235060a8ca487384bf8d00de5ce05544a7c2ef4
 - [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 - [4. Consideraciones generales](#4-consideraciones-generales)
 - [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -41,8 +45,29 @@ Estos son datos que te proponemos:
   En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
   y Johto, junto con sus respectivas estadísticas usadas en el juego
   [Pokémon GO](http://pokemongolive.com).
+
   - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
 
+<<<<<<< HEAD
+- [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
+  Este set de datos muestra la lista de campeones en una liga del
+  juego League of Legends (LoL).
+
+  - [Investigación con jugadores de LoL](src/data/lol/README.md)
+
+- [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
+  Este set nos proporciona la lista de los personajes de la serie Rick and
+  Morty. [API Rick and Morty](https://rickandmortyapi.com).
+
+  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+
+- [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
+  Este set nos proporciona la lista de los atletas que ganaron medallas en las
+  olímpiadas de Río de Janeiro.
+  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](/src/data/athletes/README.md)
+
+=======
+>>>>>>> 9235060a8ca487384bf8d00de5ce05544a7c2ef4
 ## 3. Objetivos de aprendizaje
 
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
@@ -354,8 +379,13 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
    repositorio de su compañera** y
    [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
    hacia el mismo.
+<<<<<<< HEAD
+2. :arrow*down: [Clona](https://help.github.com/articles/cloning-a-repository/)
+   tu \_fork* a tu computadora (copia local).
+=======
 2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
    tu _fork_ a tu computadora (copia local).
+>>>>>>> 9235060a8ca487384bf8d00de5ce05544a7c2ef4
 3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
    asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
 4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
