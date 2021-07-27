@@ -1,4 +1,4 @@
-import { ordenaNombre , verRegion } from '../src/data.js';
+import { filtrar , ordenaNombre , verRegion } from '../src/data.js';
 
 const pokemonMock = {
     pokemon: [
@@ -533,6 +533,26 @@ describe('verRegion', () => {
     it('Region johto', () => {
         const regionJohto = verRegion ('johto' , pokemonMock.pokemon);
         expect(regionJohto[0].generation.name).toBe('johto');
+    });
+
+})
+
+// TEST PARA FILTRO
+
+describe('filtrar', () => {
+
+    it('Es una funcion', () => {
+        expect(typeof filtrar).toBe('function');
+    });
+
+    // it('Deberia filtrar por el tipo de grass', () => {
+    //     const tipoGrass = filtrar ('grass', 'poison', pokemonMock.pokemon);
+    //     expect(tipoGrass[0].type).toEqual('grass','poison');
+    //});
+
+    it('Filtrar por el tipo de pokemon', () => {
+        const tipoPokemon = filtrar ('psychic' , pokemonMock.pokemon);
+        expect(filtrar(pokemonMock.pokemon)).toBe('psychic');
     });
 
 })
